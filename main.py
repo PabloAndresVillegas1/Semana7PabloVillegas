@@ -1,5 +1,6 @@
 import tkinter as tk
 from PIL import Image, ImageTk
+import webbrowser
 
 from gestion_distribuidores import gestionar_distribuidores
 from gestion_empacadores import empaquetar_producto
@@ -41,7 +42,16 @@ def main():
     menubar.add_cascade(label="Importaciones", menu=importaciones_menu)
     importaciones_menu.add_command(label="Gestionar Importaciones", command=ver_importaciones)
 
+    importaciones_menu = tk.Menu(menubar, tearoff=0)
+    menubar.add_cascade(label="Documento-Word", menu=importaciones_menu)
+    importaciones_menu.add_command(label="Abrir archivo de Word", command=abrir_archivo_word)
+
     root.mainloop()
+
+def abrir_archivo_word():
+    # Reemplaza esta URL con la URL de tu archivo de Word en OneDrive
+    url = "https://uniminuto0-my.sharepoint.com/:w:/g/personal/pablo_villegas-m_uniminuto_edu_co/ETvu7bNm4JxHulvIAakEYEcBDYnCglylzUnnEqaCxT95yw?e=ixkYht"
+    webbrowser.open(url)
 
 def centrar_ventana(window, width, height):
     screen_width = window.winfo_screenwidth()
