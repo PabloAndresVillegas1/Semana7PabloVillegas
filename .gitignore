@@ -1,0 +1,13 @@
+# Entorno virtual
+venv/
+env/
+
+# Archivos de Python compilados
+__pycache__/
+*.py[cod]
+
+# Archivos de configuración de VS Code
+.vscode/
+
+# Archivos de configuración de PyCharm
+.idea/
